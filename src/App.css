@@ -1,31 +1,188 @@
-.App {
+.square {
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
   text-align: center;
+  width: 34px;
+  background-color:rgba(253, 212, 159, 0.74);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.square.dark {
+  background:#999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#app-header {
+  background-color:rgba(253, 212, 159, 0.74);
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: linear-gradient(rgba(253, 212, 159, 0.74),antiquewhite);
 }
 
-.App-link {
-  color: #61dafb;
+#app-header::after {
+  content:""
+}
+
+#title {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align:center;
+  margin-top:0px
+}
+
+
+.app-body {
+  background-color:antiquewhite
+}
+
+.app-body::before {
+  content:"";
+}
+
+.piece {
+  line-height: 25px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #484848;
+  color:yellow;
+  font-size: 25px;
+  box-shadow: 1px 1px 1px black;
+  padding: 10px 4px 0 3px;
+  display: inline-block;
+
+
+}
+
+.piece.red {
+  box-shadow: 1px 1px 1px black;
+  background: #ff0000;
+}
+
+#cookie {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: rgb(173, 129, 63);
+  background: rgb(173, 129, 63)
+}
+
+.square.highlighted {
+  background:aquamarine
+}
+
+.square.dark:disabled {
+  background:#999;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:disabled {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  color:#282c34;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.board-row button {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row button:disabled {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  color:#282c34;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.small-link {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  color: blue;
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  color: blue;
+  font-size: large;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
 }
 
 @keyframes App-logo-spin {
