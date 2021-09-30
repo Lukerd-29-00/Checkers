@@ -5,8 +5,6 @@
   font-weight: bold;
   line-height: 34px;
   height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
   padding: 0;
   text-align: center;
   width: 34px;
@@ -44,15 +42,16 @@
 }
 
 .piece {
-  line-height: 25px;
-  height: 20px;
-  width: 20px;
+  line-height: 35px;
+  height: 25px;
+  width: 28px;
   border-radius: 50%;
   background: #484848;
   color:yellow;
+  text-align: center;
   font-size: 25px;
   box-shadow: 1px 1px 1px black;
-  padding: 10px 4px 0 3px;
+  padding: 0px 0px 0px 0px;
   display: inline-block;
 
 
